@@ -17,8 +17,7 @@ services:
 
   # Payment
   metacortex-payments:
-    build:
-      context: ./MetaCortex.Payments
+    image: ghcr.io/heimbrand/metacortex-payments:latest
     ports:
       - "5001:80"
     environment:
@@ -44,8 +43,7 @@ services:
 
   # Orders
   metacortex-orders:
-    build:
-      context: ./MetaCortex.Orders
+    image: ghcr.io/anders0b/metacortex-orders:latest
     ports:
       - "5002:80"
     environment:
@@ -71,8 +69,7 @@ services:
 
   # Customers
   metacortex-customers:
-    build:
-      context: ./MetaCortex.Customers
+    image: ghcr.io/jesperwhendin/metacortex-customers:latest
     ports:
       - "5003:80"
     environment:
@@ -98,8 +95,7 @@ services:
 
   # Products
   metacortex-products:
-    build:
-      context: ./MetaCortex.Products
+    image: ghcr.io/gabrielrai/metacortex-products:latest
     ports:
       - "5004:80"
     environment:
